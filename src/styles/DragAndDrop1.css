@@ -1,0 +1,21 @@
+.DragAndDrop1__container {
+    height: 90vh ;
+    width: 90vw ;
+    margin: 5vh 5vw;
+    border: 2px solid black;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+}
+
+#s1 {
+    background-color: red;
+    margin: 20px ;
+}
+
+#s2 {
+    background-color: blue;
+    margin: 20px ;
+}
