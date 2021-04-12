@@ -52,34 +52,29 @@ export default class DragAndDrop1 extends Component {
     });
   };
 
-  getStyle(style) {
-    return {
-      position: style.position,
-      left: style.left,
-      top: style.top,
-    };
+  getStyle(id) {
+    const { position, left, top } = this.state.styles.find(
+      (style) => style.id === id
+    );
+    return { position, left, top };
   }
 
   render() {
-    const { styles } = this.state;
-
     return (
-      <div
-        className="DragAndDrop1__container"
-      >
+      <div className="DragAndDrop1__container">
         <div
           className="square"
           id="s1"
           onMouseDown={this.handleSetInitialPosition}
           onMouseMove={this.handleMouseMove}
-          style={this.getStyle(styles.find((style) => style.id === "s1"))}
+          style={this.getStyle("s1")}
         ></div>
         <div
           className="square"
           id="s2"
           onMouseDown={this.handleSetInitialPosition}
           onMouseMove={this.handleMouseMove}
-          style={this.getStyle(styles.find((style) => style.id === "s2"))}
+          style={this.getStyle("s2")}
         ></div>
       </div>
     );
